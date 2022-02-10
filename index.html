@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="item" src="assets/cupcake1.png">
+        <img id="bricks" src="assets/bricks.png">
+        <img id="skybox" src="assets/city.jpeg">
+        <a-asset-item id="3dcupcake" src="assets/browncupcake.glb"></a-asset-item>
+      </a-assets>
+
+
+      <a-gltf-model src="#balloon" position="0 0.5 -1.8" scale="0.5 0.5 0.5"> </a-gltf-model>
+
+
+      <a-sphere position="-2 0.5 -3" rotation="0 45 0" radius="0.5" color="#4CC3D9"></a-sphere>
+      <a-box position="0 0.5 -3"
+      scale="1 1 1" color="red" material="src:#bricks"></a-box>
+      <a-entity position="0 1.6 -3" scale="0.6 0.6 0.6"  material="color: #469594; metalness: 0.59" geometry="primitive: torusKnot"></a-entity>
+      <a-entity geometry="primitive:  octahedron;  radius:  0.5" position="2 0.5 -3" rotation="-25 138 8" radius="0.5" radius-tubular="0.1" color="yellow"></a-entity>
+      
+      <a-image position="0 2.75 -3" rotation="0 0 0" material=" src:#cupcake1"></a-image>
+
+      <a-image position="-2 2.75 -3" rotation="0 15 0" material="src:#cupcake1"></a-image>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" material="src: #bricks"></a-plane>
+      <a-sky src="#skybox"></a-sky>
+    </a-scene>
+  </body>
+</html>
